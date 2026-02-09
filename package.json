@@ -1,0 +1,83 @@
+{
+  "name": "nvm-win-ui",
+  "version": "1.0.0",
+  "description": "Modern GUI for NVM Windows - Manage Node.js versions with ease",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win --x64",
+    "build:win32": "electron-builder --win --ia32",
+    "package": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "nvm",
+    "node",
+    "electron",
+    "gui",
+    "windows",
+    "version-manager",
+    "nodejs"
+  ],
+  "author": {
+    "name": "Abdelrahman",
+    "email": "your-email@example.com",
+    "url": "https://github.com/Abdelrahman968"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abdelrahman968/nvm-win-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abdelrahman968/nvm-win-ui/issues"
+  },
+  "homepage": "https://github.com/Abdelrahman968/nvm-win-ui#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.abdelrahman.nvmmanager",
+    "productName": "NVM Windows Manager",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "NVM Manager"
+    },
+    "files": [
+      "**/*",
+      "!**/*.ts",
+      "!*.code-workspace",
+      "!LICENSE.md",
+      "!package.lock.json",
+      "!package-lock.json",
+      "!src/",
+      "!e2e/",
+      "!hooks/",
+      "!angular.json",
+      "!_config.yml",
+      "!karma.conf.js",
+      "!tsconfig.json",
+      "!tslint.json"
+    ]
+  }
+}
