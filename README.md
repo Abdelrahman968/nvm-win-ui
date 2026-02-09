@@ -163,6 +163,10 @@ npm run build
 
 ![Settings Tab](screenshots/settings.png)
 
+### System Info
+
+![Settings Tab](screenshots/system.png)
+
 </div>
 
 ## 🎨 Tech Stack
